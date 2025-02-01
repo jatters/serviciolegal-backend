@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_shared_caracteristica_servicios",
+  "info": {
+    "displayName": "Caracteristica Servicio",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

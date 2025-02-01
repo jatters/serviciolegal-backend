@@ -1,0 +1,109 @@
+{
+  "kind": "collectionType",
+  "collectionName": "abogados",
+  "info": {
+    "singularName": "abogado",
+    "pluralName": "abogados",
+    "displayName": "Abogados",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "phone": {
+      "type": "biginteger",
+      "required": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "email": {
+      "type": "email",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 60,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "categorias": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::categoria.categoria",
+      "mappedBy": "abogado"
+    },
+    "servicio": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::servicio.servicio",
+      "mappedBy": "abogado"
+    },
+    "categoria_servicios": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::categoria-servicio.categoria-servicio",
+      "mappedBy": "abogado"
+    },
+    "servicio_ls": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::servicio-ls.servicio-ls",
+      "mappedBy": "abogado"
+    },
+    "categorias_servicio_ls": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::cat-service-ls.cat-service-ls",
+      "mappedBy": "abogado"
+    },
+    "especialidad_ls": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
+    }
+  }
+}

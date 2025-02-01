@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_shared_informacion_adicionals",
+  "info": {
+    "displayName": "Información adicional"
+  },
+  "options": {},
+  "attributes": {
+    "informacionAdicional": {
+      "type": "blocks"
+    }
+  }
+}
