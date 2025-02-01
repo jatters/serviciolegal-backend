@@ -11,14 +11,15 @@
   },
   "devDependencies": {},
   "dependencies": {
-    "@strapi/plugin-cloud": "5.8.0",
+    "@strapi/plugin-cloud": "5.9.0",
     "@strapi/plugin-seo": "^2.0.4",
-    "@strapi/plugin-users-permissions": "5.8.0",
-    "@strapi/strapi": "5.8.0",
+    "@strapi/plugin-users-permissions": "5.9.0",
+    "@strapi/strapi": "5.9.0",
     "mysql2": "3.9.4",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
+    "sharp": "^0.33.5",
     "styled-components": "^6.0.0"
   },
   "author": {
