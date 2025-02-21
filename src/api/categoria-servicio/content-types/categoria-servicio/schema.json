@@ -28,7 +28,7 @@
     "icon": {
       "type": "media",
       "multiple": false,
-      "required": false,
+      "required": true,
       "allowedTypes": [
         "images"
       ],
@@ -91,6 +91,9 @@
           "localized": false
         }
       }
+    },
+    "order": {
+      "type": "integer"
     }
   }
 }

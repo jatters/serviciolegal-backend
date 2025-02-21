@@ -710,6 +710,7 @@ export interface ApiCategoriaServicioCategoriaServicio
         };
       }>;
     icon: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
@@ -720,6 +721,7 @@ export interface ApiCategoriaServicioCategoriaServicio
       'oneToMany',
       'api::categoria-servicio.categoria-servicio'
     >;
+    order: Schema.Attribute.Integer;
     publishedAt: Schema.Attribute.DateTime;
     SEO: Schema.Attribute.Component<'shared.seo', false> &
       Schema.Attribute.SetPluginOptions<{
