@@ -4,10 +4,11 @@
   "info": {
     "singularName": "inicio-ls-consulting",
     "pluralName": "inicio-ls-consultings",
-    "displayName": "Inicio Ls Consulting"
+    "displayName": "Inicio Ls Consulting",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {
     "i18n": {
@@ -34,17 +35,17 @@
       "required": true
     },
     "banner": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images"
       ],
-      "type": "media",
-      "multiple": false,
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
-      },
-      "required": true
+      }
     },
     "SEO": {
       "type": "component",

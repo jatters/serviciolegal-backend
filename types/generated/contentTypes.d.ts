@@ -378,7 +378,7 @@ export interface ApiAbogadoAbogado extends Struct.CollectionTypeSchema {
     singularName: 'abogado';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   pluginOptions: {
     i18n: {
@@ -612,7 +612,7 @@ export interface ApiCatServiceLsCatServiceLs
     singularName: 'cat-service-ls';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   pluginOptions: {
     i18n: {
@@ -684,7 +684,7 @@ export interface ApiCategoriaServicioCategoriaServicio
     singularName: 'categoria-servicio';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   pluginOptions: {
     i18n: {
@@ -759,7 +759,7 @@ export interface ApiCategoriaCategoria extends Struct.CollectionTypeSchema {
     singularName: 'categoria';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   pluginOptions: {
     i18n: {
@@ -813,7 +813,7 @@ export interface ApiCompanyLsCompanyLs extends Struct.SingleTypeSchema {
     singularName: 'company-ls';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   pluginOptions: {
     i18n: {
@@ -887,7 +887,7 @@ export interface ApiCompanyCompany extends Struct.SingleTypeSchema {
     singularName: 'company';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   pluginOptions: {
     i18n: {
@@ -962,7 +962,7 @@ export interface ApiCondicionDeUsoCondicionDeUso
     singularName: 'condicion-de-uso';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   pluginOptions: {
     i18n: {
@@ -1013,7 +1013,7 @@ export interface ApiContactoLsContactoLs extends Struct.SingleTypeSchema {
     singularName: 'contacto-ls';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   pluginOptions: {
     i18n: {
@@ -1100,7 +1100,7 @@ export interface ApiContactoContacto extends Struct.SingleTypeSchema {
     singularName: 'contacto';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   pluginOptions: {
     i18n: {
@@ -1192,7 +1192,7 @@ export interface ApiFaqLsFaqLs extends Struct.CollectionTypeSchema {
     singularName: 'faq-ls';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   pluginOptions: {
     i18n: {
@@ -1242,7 +1242,7 @@ export interface ApiFaqFaq extends Struct.CollectionTypeSchema {
     singularName: 'faq';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   pluginOptions: {
     i18n: {
@@ -1280,12 +1280,13 @@ export interface ApiInicioLsConsultingInicioLsConsulting
   extends Struct.SingleTypeSchema {
   collectionName: 'inicio_ls_consultings';
   info: {
+    description: '';
     displayName: 'Inicio Ls Consulting';
     pluralName: 'inicio-ls-consultings';
     singularName: 'inicio-ls-consulting';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   pluginOptions: {
     i18n: {
@@ -1344,7 +1345,7 @@ export interface ApiInicioInicio extends Struct.SingleTypeSchema {
     singularName: 'inicio';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   pluginOptions: {
     i18n: {
@@ -1400,7 +1401,7 @@ export interface ApiNosotroLsNosotroLs extends Struct.SingleTypeSchema {
     singularName: 'nosotro-ls';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   pluginOptions: {
     i18n: {
@@ -1457,7 +1458,7 @@ export interface ApiNosotroNosotro extends Struct.SingleTypeSchema {
     singularName: 'nosotro';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   pluginOptions: {
     i18n: {
@@ -1521,7 +1522,7 @@ export interface ApiPolicyLsPolicyLs extends Struct.SingleTypeSchema {
     singularName: 'policy-ls';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   pluginOptions: {
     i18n: {
@@ -1573,7 +1574,7 @@ export interface ApiPoliticaDePrivacidadPoliticaDePrivacidad
     singularName: 'politica-de-privacidad';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   pluginOptions: {
     i18n: {
@@ -1844,7 +1845,7 @@ export interface ApiTermLsTermLs extends Struct.SingleTypeSchema {
     singularName: 'term-ls';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   pluginOptions: {
     i18n: {
@@ -1896,7 +1897,7 @@ export interface ApiTerminoYCondicionTerminoYCondicion
     singularName: 'termino-y-condicion';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   pluginOptions: {
     i18n: {
@@ -1947,7 +1948,7 @@ export interface ApiTestimonioTestimonio extends Struct.CollectionTypeSchema {
     singularName: 'testimonio';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     avatar: Schema.Attribute.Media<'images'>;
