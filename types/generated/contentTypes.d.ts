@@ -1782,6 +1782,10 @@ export interface ApiServicioServicio extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    faqService: Schema.Attribute.Component<
+      'preguntas-frecuentes.preguntas-frecuentes',
+      true
+    >;
     icon: Schema.Attribute.Media<'images'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

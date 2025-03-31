@@ -1,5 +1,17 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface PreguntasFrecuentesPreguntasFrecuentes
+  extends Struct.ComponentSchema {
+  collectionName: 'components_preguntas_frecuentes_preguntas_frecuentes';
+  info: {
+    displayName: 'Preguntas Frecuentes';
+  };
+  attributes: {
+    answer: Schema.Attribute.Text;
+    question: Schema.Attribute.String;
+  };
+}
+
 export interface SharedCaracteristicaServicio extends Struct.ComponentSchema {
   collectionName: 'components_shared_caracteristica_servicios';
   info: {
@@ -81,6 +93,7 @@ export interface SharedSeo extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'preguntas-frecuentes.preguntas-frecuentes': PreguntasFrecuentesPreguntasFrecuentes;
       'shared.caracteristica-servicio': SharedCaracteristicaServicio;
       'shared.informacion-adicional': SharedInformacionAdicional;
       'shared.meta-social': SharedMetaSocial;

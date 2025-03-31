@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_preguntas_frecuentes_preguntas_frecuentes",
+  "info": {
+    "displayName": "Preguntas Frecuentes"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string"
+    },
+    "answer": {
+      "type": "text"
+    }
+  }
+}

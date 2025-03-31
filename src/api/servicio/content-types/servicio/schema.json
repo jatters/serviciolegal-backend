@@ -149,6 +149,11 @@
       "relation": "manyToMany",
       "target": "api::articulo.articulo",
       "mappedBy": "servicios"
+    },
+    "faqService": {
+      "type": "component",
+      "repeatable": true,
+      "component": "preguntas-frecuentes.preguntas-frecuentes"
     }
   }
 }
