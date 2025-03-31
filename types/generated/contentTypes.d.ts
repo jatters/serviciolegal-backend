@@ -1785,7 +1785,12 @@ export interface ApiServicioServicio extends Struct.CollectionTypeSchema {
     faqService: Schema.Attribute.Component<
       'preguntas-frecuentes.preguntas-frecuentes',
       true
-    >;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     icon: Schema.Attribute.Media<'images'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1811,6 +1816,7 @@ export interface ApiServicioServicio extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    order: Schema.Attribute.Integer;
     publishedAt: Schema.Attribute.DateTime;
     SEO: Schema.Attribute.Component<'shared.seo', false> &
       Schema.Attribute.SetPluginOptions<{
