@@ -1818,8 +1818,14 @@ export interface ApiServicioServicio extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    servicio: Schema.Attribute.Relation<'manyToOne', 'api::servicio.servicio'>;
-    servicios: Schema.Attribute.Relation<'oneToMany', 'api::servicio.servicio'>;
+    servicios_relateds: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::servicio.servicio'
+    >;
+    serviciosrels: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::servicio.servicio'
+    >;
     Slug: Schema.Attribute.UID<'title'> &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{

@@ -115,17 +115,17 @@
       "targetField": "title",
       "required": true
     },
-    "servicios": {
+    "servicios_relateds": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::servicio.servicio",
-      "mappedBy": "servicio"
+      "inversedBy": "serviciosrels"
     },
-    "servicio": {
+    "serviciosrels": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::servicio.servicio",
-      "inversedBy": "servicios"
+      "mappedBy": "servicios_relateds"
     },
     "additionalInformation": {
       "pluginOptions": {
