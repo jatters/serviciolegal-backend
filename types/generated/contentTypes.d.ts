@@ -734,6 +734,13 @@ export interface ApiCategoriaServicioCategoriaServicio
         };
       }>;
     servicios: Schema.Attribute.Relation<'oneToMany', 'api::servicio.servicio'>;
+    shortDescription: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     slug: Schema.Attribute.UID<'title'> &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{

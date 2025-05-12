@@ -94,6 +94,15 @@
     },
     "order": {
       "type": "integer"
+    },
+    "shortDescription": {
+      "type": "text",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
