@@ -103,6 +103,14 @@
           "localized": true
         }
       }
+    },
+    "callToActionText": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

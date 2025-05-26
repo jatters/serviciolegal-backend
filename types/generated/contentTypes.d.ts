@@ -550,11 +550,6 @@ export interface ApiArticuloArticulo extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
-    articulos: Schema.Attribute.Relation<'manyToOne', 'api::articulo.articulo'>;
-    articulosrelated: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::articulo.articulo'
-    >;
     categorias: Schema.Attribute.Relation<
       'manyToMany',
       'api::categoria.categoria'
@@ -582,6 +577,7 @@ export interface ApiArticuloArticulo extends Struct.CollectionTypeSchema {
       'api::articulo.articulo'
     >;
     publishedAt: Schema.Attribute.DateTime;
+    richContent: Schema.Attribute.Blocks;
     SEO: Schema.Attribute.Component<'shared.seo', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -697,6 +693,12 @@ export interface ApiCategoriaServicioCategoriaServicio
   };
   attributes: {
     abogado: Schema.Attribute.Relation<'manyToOne', 'api::abogado.abogado'>;
+    callToActionText: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     cover: Schema.Attribute.Media<'images'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

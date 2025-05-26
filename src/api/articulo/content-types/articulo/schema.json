@@ -74,17 +74,8 @@
       "target": "api::servicio.servicio",
       "inversedBy": "articulos"
     },
-    "articulosrelated": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::articulo.articulo",
-      "mappedBy": "articulos"
-    },
-    "articulos": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::articulo.articulo",
-      "inversedBy": "articulosrelated"
+    "richContent": {
+      "type": "blocks"
     }
   }
 }
