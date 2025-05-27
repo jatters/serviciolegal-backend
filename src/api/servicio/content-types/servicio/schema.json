@@ -162,6 +162,14 @@
     },
     "order": {
       "type": "integer"
+    },
+    "callToActionText": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

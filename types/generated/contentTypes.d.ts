@@ -1766,6 +1766,12 @@ export interface ApiServicioServicio extends Struct.CollectionTypeSchema {
       'manyToMany',
       'api::articulo.articulo'
     >;
+    callToActionText: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     Caracteristicas: Schema.Attribute.Component<
       'shared.caracteristica-servicio',
       true
