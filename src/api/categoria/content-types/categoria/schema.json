@@ -25,31 +25,33 @@
       "type": "string",
       "required": true
     },
-    "description": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "blocks"
-    },
     "abogado": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::abogado.abogado",
       "inversedBy": "categorias"
     },
-    "articulos": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::articulo.articulo",
-      "mappedBy": "categorias"
-    },
     "articulos_ls": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::articulo-ls.articulo-ls",
       "mappedBy": "categorias"
+    },
+    "postsSl": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::articulo.articulo",
+      "mappedBy": "category"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "description": {
+      "type": "text"
+    },
+    "descriptionSEO": {
+      "type": "text"
     }
   }
 }

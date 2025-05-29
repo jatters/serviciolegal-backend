@@ -550,8 +550,8 @@ export interface ApiArticuloArticulo extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
-    categorias: Schema.Attribute.Relation<
-      'manyToMany',
+    category: Schema.Attribute.Relation<
+      'manyToOne',
       'api::categoria.categoria'
     >;
     content: Schema.Attribute.RichText &
@@ -577,7 +577,6 @@ export interface ApiArticuloArticulo extends Struct.CollectionTypeSchema {
       'api::articulo.articulo'
     >;
     publishedAt: Schema.Attribute.DateTime;
-    richContent: Schema.Attribute.Blocks;
     SEO: Schema.Attribute.Component<'shared.seo', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -781,10 +780,6 @@ export interface ApiCategoriaCategoria extends Struct.CollectionTypeSchema {
   };
   attributes: {
     abogado: Schema.Attribute.Relation<'manyToOne', 'api::abogado.abogado'>;
-    articulos: Schema.Attribute.Relation<
-      'manyToMany',
-      'api::articulo.articulo'
-    >;
     articulos_ls: Schema.Attribute.Relation<
       'manyToMany',
       'api::articulo-ls.articulo-ls'
@@ -792,12 +787,8 @@ export interface ApiCategoriaCategoria extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.Blocks &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
+    description: Schema.Attribute.Text;
+    descriptionSEO: Schema.Attribute.Text;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -810,7 +801,9 @@ export interface ApiCategoriaCategoria extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    postsSl: Schema.Attribute.Relation<'oneToMany', 'api::articulo.articulo'>;
     publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'name'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

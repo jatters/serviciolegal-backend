@@ -62,20 +62,17 @@
       },
       "component": "shared.seo"
     },
-    "categorias": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::categoria.categoria",
-      "inversedBy": "articulos"
-    },
     "servicios": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::servicio.servicio",
       "inversedBy": "articulos"
     },
-    "richContent": {
-      "type": "blocks"
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::categoria.categoria",
+      "inversedBy": "postsSl"
     }
   }
 }
