@@ -1977,48 +1977,6 @@ export interface ApiTerminoYCondicionTerminoYCondicion
   };
 }
 
-export interface ApiTestimonioTestimonio extends Struct.CollectionTypeSchema {
-  collectionName: 'testimonios';
-  info: {
-    description: '';
-    displayName: 'Testimonios';
-    pluralName: 'testimonios';
-    singularName: 'testimonio';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    avatar: Schema.Attribute.Media<'images'>;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    fecha: Schema.Attribute.Date & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::testimonio.testimonio'
-    > &
-      Schema.Attribute.Private;
-    name: Schema.Attribute.String & Schema.Attribute.Required;
-    publishedAt: Schema.Attribute.DateTime;
-    review: Schema.Attribute.Text & Schema.Attribute.Required;
-    score: Schema.Attribute.Integer &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetMinMax<
-        {
-          max: 5;
-          min: 1;
-        },
-        number
-      > &
-      Schema.Attribute.DefaultTo<5>;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -2551,7 +2509,6 @@ declare module '@strapi/strapi' {
       'api::servicio.servicio': ApiServicioServicio;
       'api::term-ls.term-ls': ApiTermLsTermLs;
       'api::termino-y-condicion.termino-y-condicion': ApiTerminoYCondicionTerminoYCondicion;
-      'api::testimonio.testimonio': ApiTestimonioTestimonio;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
