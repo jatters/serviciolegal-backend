@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_legal_personas",
+  "info": {
+    "displayName": "Persona",
+    "icon": "user"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "documentType": {
+      "type": "enumeration",
+      "enum": [
+        "CC",
+        "CE",
+        "NIT",
+        "Pasaporte"
+      ]
+    },
+    "document": {
+      "type": "string"
+    },
+    "nationality": {
+      "type": "string"
+    },
+    "countryResidence": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

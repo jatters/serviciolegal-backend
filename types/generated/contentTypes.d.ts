@@ -1931,6 +1931,56 @@ export interface ApiServicioServicio extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiStatutesRequestStatutesRequest
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'statutes_requests';
+  info: {
+    displayName: 'Solicitud Estatuto';
+    pluralName: 'statutes-requests';
+    singularName: 'statutes-request';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    address: Schema.Attribute.String;
+    authorizedCapital: Schema.Attribute.BigInteger;
+    companyName: Schema.Attribute.String;
+    contactEmail: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::statutes-request.statutes-request'
+    > &
+      Schema.Attribute.Private;
+    nominalValue: Schema.Attribute.BigInteger;
+    paidInCapital: Schema.Attribute.BigInteger;
+    phone: Schema.Attribute.String;
+    principalLegalRepresentative: Schema.Attribute.Component<
+      'legal.persona',
+      false
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    registeredCity: Schema.Attribute.String;
+    shareholder: Schema.Attribute.Component<'legal.accionista', true>;
+    state: Schema.Attribute.Enumeration<
+      ['Pendiente de pago', 'Pagado', 'Completado', 'Fallido']
+    > &
+      Schema.Attribute.DefaultTo<'Pendiente de pago'>;
+    subscribedCapital: Schema.Attribute.BigInteger;
+    substituteLegalRepresentative: Schema.Attribute.Component<
+      'legal.persona',
+      false
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiTermLsTermLs extends Struct.SingleTypeSchema {
   collectionName: 'terms_ls';
   info: {
@@ -2291,8 +2341,8 @@ export interface PluginUploadFile extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
-    alternativeText: Schema.Attribute.String;
-    caption: Schema.Attribute.String;
+    alternativeText: Schema.Attribute.Text;
+    caption: Schema.Attribute.Text;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -2316,7 +2366,7 @@ export interface PluginUploadFile extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     mime: Schema.Attribute.String & Schema.Attribute.Required;
     name: Schema.Attribute.String & Schema.Attribute.Required;
-    previewUrl: Schema.Attribute.String;
+    previewUrl: Schema.Attribute.Text;
     provider: Schema.Attribute.String & Schema.Attribute.Required;
     provider_metadata: Schema.Attribute.JSON;
     publishedAt: Schema.Attribute.DateTime;
@@ -2325,7 +2375,7 @@ export interface PluginUploadFile extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    url: Schema.Attribute.String & Schema.Attribute.Required;
+    url: Schema.Attribute.Text & Schema.Attribute.Required;
     width: Schema.Attribute.Integer;
   };
 }
@@ -2565,6 +2615,7 @@ declare module '@strapi/strapi' {
       'api::politica-de-privacidad.politica-de-privacidad': ApiPoliticaDePrivacidadPoliticaDePrivacidad;
       'api::servicio-ls.servicio-ls': ApiServicioLsServicioLs;
       'api::servicio.servicio': ApiServicioServicio;
+      'api::statutes-request.statutes-request': ApiStatutesRequestStatutesRequest;
       'api::term-ls.term-ls': ApiTermLsTermLs;
       'api::termino-y-condicion.termino-y-condicion': ApiTerminoYCondicionTerminoYCondicion;
       'plugin::content-releases.release': PluginContentReleasesRelease;

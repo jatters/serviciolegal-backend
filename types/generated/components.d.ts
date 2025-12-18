@@ -1,5 +1,39 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface LegalAccionista extends Struct.ComponentSchema {
+  collectionName: 'components_legal_accionistas';
+  info: {
+    displayName: 'Accionista';
+  };
+  attributes: {
+    country: Schema.Attribute.String;
+    document: Schema.Attribute.String;
+    documentType: Schema.Attribute.Enumeration<
+      ['CC', 'CE', 'NIT', 'Pasaporte']
+    >;
+    name: Schema.Attribute.String;
+    nationality: Schema.Attribute.String;
+    numberOfShares: Schema.Attribute.Integer;
+  };
+}
+
+export interface LegalPersona extends Struct.ComponentSchema {
+  collectionName: 'components_legal_personas';
+  info: {
+    displayName: 'Persona';
+    icon: 'user';
+  };
+  attributes: {
+    countryResidence: Schema.Attribute.String;
+    document: Schema.Attribute.String;
+    documentType: Schema.Attribute.Enumeration<
+      ['CC', 'CE', 'NIT', 'Pasaporte']
+    >;
+    name: Schema.Attribute.String;
+    nationality: Schema.Attribute.String;
+  };
+}
+
 export interface PreguntasFrecuentesPreguntasFrecuentes
   extends Struct.ComponentSchema {
   collectionName: 'components_preguntas_frecuentes_preguntas_frecuentes';
@@ -93,6 +127,8 @@ export interface SharedSeo extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'legal.accionista': LegalAccionista;
+      'legal.persona': LegalPersona;
       'preguntas-frecuentes.preguntas-frecuentes': PreguntasFrecuentesPreguntasFrecuentes;
       'shared.caracteristica-servicio': SharedCaracteristicaServicio;
       'shared.informacion-adicional': SharedInformacionAdicional;

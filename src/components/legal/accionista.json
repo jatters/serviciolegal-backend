@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_legal_accionistas",
+  "info": {
+    "displayName": "Accionista"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "documentType": {
+      "type": "enumeration",
+      "enum": [
+        "CC",
+        "CE",
+        "NIT",
+        "Pasaporte"
+      ]
+    },
+    "document": {
+      "type": "string"
+    },
+    "nationality": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "numberOfShares": {
+      "type": "integer"
+    }
+  },
+  "config": {}
+}

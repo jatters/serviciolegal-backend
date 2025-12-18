@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "statutes_requests",
+  "info": {
+    "singularName": "statutes-request",
+    "pluralName": "statutes-requests",
+    "displayName": "Solicitud Estatuto"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "companyName": {
+      "type": "string"
+    },
+    "registeredCity": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "contactEmail": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "nominalValue": {
+      "type": "biginteger"
+    },
+    "authorizedCapital": {
+      "type": "biginteger"
+    },
+    "subscribedCapital": {
+      "type": "biginteger"
+    },
+    "paidInCapital": {
+      "type": "biginteger"
+    },
+    "shareholder": {
+      "type": "component",
+      "component": "legal.accionista",
+      "repeatable": true
+    },
+    "principalLegalRepresentative": {
+      "type": "component",
+      "component": "legal.persona",
+      "repeatable": false
+    },
+    "substituteLegalRepresentative": {
+      "type": "component",
+      "component": "legal.persona",
+      "repeatable": false
+    },
+    "state": {
+      "type": "enumeration",
+      "default": "Pendiente de pago",
+      "enum": [
+        "Pendiente de pago",
+        "Pagado",
+        "Completado",
+        "Fallido"
+      ]
+    }
+  }
+}
