@@ -2,7 +2,14 @@ const stripMarkdown = require("../utils/stripMarkdown.js");
 
 module.exports = ({ env }) => ({
   seo: { enabled: true },
-
+  mcp: {
+    enabled: process.env.NODE_ENV === "development" ? true : false,
+    config: {
+      session: {
+        type: "memory",
+      },
+    },
+  },
   meilisearch: {
     config: {
       host: env("MEILI_HOST"),

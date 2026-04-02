@@ -4,23 +4,29 @@
   "version": "0.1.0",
   "description": "Servicio Legal Manager",
   "scripts": {
+    "build": "strapi build",
+    "console": "strapi console",
+    "deploy": "strapi deploy",
+    "dev": "strapi develop",
     "develop": "strapi develop",
     "start": "strapi start",
-    "build": "strapi build",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "upgrade": "npx @strapi/upgrade latest",
+    "upgrade:dry": "npx @strapi/upgrade latest --dry"
   },
   "devDependencies": {},
   "dependencies": {
+    "@sensinum/strapi-plugin-mcp": "^1.1.0",
     "@strapi/plugin-seo": "^2.0.4",
-    "@strapi/plugin-users-permissions": "5.39.0",
-    "@strapi/strapi": "5.39.0",
+    "@strapi/plugin-users-permissions": "5.41.1",
+    "@strapi/strapi": "5.41.1",
     "mysql2": "3.9.8",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
     "sharp": "^0.33.5",
-    "strapi-plugin-meilisearch": "^0.13.2",
-    "styled-components": "^6.0.0"
+    "strapi-plugin-meilisearch": "^0.13.4",
+    "styled-components": "^6.1.19"
   },
   "author": {
     "name": "einscube"
@@ -29,7 +35,7 @@
     "uuid": "f1c02886-e32f-4a5c-bc5d-d65d5eb11ca1"
   },
   "engines": {
-    "node": ">=18.0.0 <=22.x.x",
+    "node": ">=20.0.0 <=24.x.x",
     "npm": ">=6.0.0"
   },
   "license": "MIT"
