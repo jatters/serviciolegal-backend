@@ -778,6 +778,13 @@ export interface ApiCategoriaServicioCategoriaServicio
           localized: false;
         };
       }>;
+    isHidden: Schema.Attribute.Boolean &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<false>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1883,6 +1890,13 @@ export interface ApiServicioServicio extends Struct.CollectionTypeSchema {
           localized: false;
         };
       }>;
+    isHidden: Schema.Attribute.Boolean &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<false>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

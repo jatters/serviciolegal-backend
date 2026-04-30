@@ -17,26 +17,26 @@
   },
   "attributes": {
     "title": {
+      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "string",
       "required": true
     },
     "icon": {
       "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images"
-      ],
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
-      }
+      },
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "servicios": {
       "type": "relation",
@@ -45,21 +45,21 @@
       "mappedBy": "categoria"
     },
     "description": {
+      "type": "text",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "text",
       "required": true
     },
     "slug": {
+      "type": "uid",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "uid",
       "targetField": "title",
       "required": true
     },
@@ -71,38 +71,38 @@
     },
     "SEO": {
       "type": "component",
-      "repeatable": false,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "component": "shared.seo"
+      "component": "shared.seo",
+      "repeatable": false
     },
     "cover": {
       "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ],
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
-      }
+      },
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "order": {
       "type": "integer"
     },
     "shortDescription": {
       "type": "text",
-      "required": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "required": true
     },
     "callToActionText": {
       "type": "text",
@@ -111,6 +111,15 @@
           "localized": true
         }
       }
+    },
+    "isHidden": {
+      "type": "boolean",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "default": false
     }
   }
 }

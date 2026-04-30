@@ -1,0 +1,50 @@
+# Local dev artifacts — installed/regenerated inside the image
+node_modules
+.cache
+.strapi
+.tmp
+build
+dist
+.yarn/install-state.gz
+.yarn/cache
+.yarn/unplugged
+
+# User uploads — bound as a volume at runtime, never bake into the image
+public/uploads
+
+# Secrets — passed in via env at runtime, not baked into the image
+.env
+.env.*
+!.env.example
+
+# VCS and editor noise
+.git
+.gitignore
+.gitattributes
+.editorconfig
+.eslintrc
+.eslintignore
+.idea
+.vscode
+
+# Docs and CI
+README.md
+*.md
+.github
+
+# Docker self-references (avoid recursive context)
+Dockerfile
+.dockerignore
+docker-compose*.yml
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Logs / temp / coverage
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+coverage
+*.tgz

@@ -17,48 +17,48 @@
   },
   "attributes": {
     "title": {
+      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "string",
       "required": true
     },
     "description": {
+      "type": "text",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "text",
       "required": true
     },
     "icon": {
       "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
       "multiple": false,
       "required": false,
       "allowedTypes": [
         "images"
-      ],
+      ]
+    },
+    "image": {
+      "type": "media",
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
-      }
-    },
-    "image": {
-      "type": "media",
+      },
       "multiple": false,
       "required": true,
       "allowedTypes": [
         "images"
-      ],
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      }
+      ]
     },
     "abogado": {
       "type": "relation",
@@ -68,36 +68,36 @@
     },
     "SEO": {
       "type": "component",
-      "repeatable": false,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "component": "shared.seo"
+      "component": "shared.seo",
+      "repeatable": false
     },
     "Caracteristicas": {
       "type": "component",
-      "repeatable": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "component": "shared.caracteristica-servicio"
+      "component": "shared.caracteristica-servicio",
+      "repeatable": true
     },
     "cover": {
       "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ],
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
-      }
+      },
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "categoria": {
       "type": "relation",
@@ -106,12 +106,12 @@
       "inversedBy": "servicios"
     },
     "Slug": {
+      "type": "uid",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "uid",
       "targetField": "title",
       "required": true
     },
@@ -128,20 +128,20 @@
       "mappedBy": "servicios_relateds"
     },
     "additionalInformation": {
+      "type": "blocks",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      },
-      "type": "blocks"
+      }
     },
     "longDescriptionService": {
+      "type": "blocks",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "blocks",
       "required": true
     },
     "articulos": {
@@ -152,13 +152,13 @@
     },
     "faqService": {
       "type": "component",
-      "repeatable": true,
-      "component": "preguntas-frecuentes.preguntas-frecuentes",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "preguntas-frecuentes.preguntas-frecuentes",
+      "repeatable": true
     },
     "order": {
       "type": "integer"
@@ -170,6 +170,15 @@
           "localized": true
         }
       }
+    },
+    "isHidden": {
+      "type": "boolean",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "default": false
     }
   }
 }

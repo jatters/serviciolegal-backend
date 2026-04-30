@@ -27,12 +27,12 @@
     },
     "phone": {
       "type": "biginteger",
-      "required": false,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "required": false
     },
     "email": {
       "type": "email",
@@ -45,25 +45,25 @@
     },
     "image": {
       "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images"
-      ],
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
-      }
+      },
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "description": {
       "type": "string",
-      "maxLength": 60,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
+      "maxLength": 60,
       "required": true
     },
     "categorias": {
@@ -97,12 +97,12 @@
       "mappedBy": "abogado"
     },
     "especialidad_ls": {
+      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "string",
       "required": true
     }
   }
